@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Switching tabs",
+  "description": "Siwtch the tabs with key press.",
+  "version": "1.0",
+  
+  "background": {
+    "service_worker": "service-worker.js"
+  },  
+  "content_scripts": [
+    {
+      "js": [
+        "content-script.js"
+      ],
+      "matches": ["<all_urls>"]
+
+    }
+  ],
+ 
+  "permissions": ["scripting", "activeTab" , "tabs"]
+}
